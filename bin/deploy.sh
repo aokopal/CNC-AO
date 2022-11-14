@@ -25,7 +25,6 @@ gzip ../dist/CNC-AO.tar
 
 echo "Packaging complete"
 
-
 echo "Ready to deploy"
 
 if [ -z "$1" ]; then
@@ -40,7 +39,9 @@ echo "Deploying to: $DEST_HOST"
 cd ..
 
 scp dist/CNC-AO.tar.gz $DEST_HOST:/tmp
-ssh $DEST_HOST 'rm -rf ~/CNC-AO/* ; tar zxf /tmp/CNC-AO.tar.gz -C ~/ ; rm -f /tmp/CNC-AO.tar.gz'
+
+# TODO: Cleanup
+ssh $DEST_HOST 'rm -rf ~/CNC-AO/* ; tar zxf /tmp/CNC-AO.tar.gz -C ~/ ; rm -f /tmp/CNC-AO.tar.gz ; mv src/* CNC-AO/ ; rm -r src/'
 
 echo "Deployed"
 
