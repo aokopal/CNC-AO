@@ -7,6 +7,8 @@ All encompassing custom 3-Axis CNC Controller package incorpates a RaspberryPi h
 - [Arduino UNO R3](https://docs.arduino.cc/hardware/uno-rev3)
 - v3.51 CNC shield - Many different manufactures, but all gerneally the same. I'm using this one [HERE](https://a.co/d/5g3BnT0)
 - (4) A4988 Stepper Driver Modules
+- [Geekworm X715](https://wiki.geekworm.com/X715) power management expansion board
+
 
 ---
 ## Installation & Setup
@@ -54,3 +56,6 @@ All encompassing custom 3-Axis CNC Controller package incorpates a RaspberryPi h
     3. Update Xorg permissions:
 
         `chmod ug+s /usr/lib/xorg/Xorg`
+
+6. X715 Power management board setup
+    1. sudo apt install python3-gpiozero
