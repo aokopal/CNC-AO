@@ -35,8 +35,9 @@ All encompassing custom 3-Axis CNC Controller package incorpates a RaspberryPi h
     1. `sudo npm install pm2 -g`
     2. `pm2 startup`
     3. Run the instructed command that is returned
-
-    5. test: `cncjs --port 8000 -m /widget:/home/aokopal/control-widget/src/`
+    4. Start CNCjs with PM2:  `pm2 start cncjs -- --port 8000 -m /widget:/home/aokopal/CNC-AO/application/control-widget/src/`
+    5. Set current running apps to startup: `pm2 save`
+    6. Get list of PM2 processes: `pm2 save`
 
 5. Setup Display:
     1. Install necessary packages:
