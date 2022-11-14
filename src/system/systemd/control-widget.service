@@ -1,0 +1,10 @@
+[Unit]
+Description=CNC Control Widget
+
+[Service]
+User=aokopal
+Restart=always
+ExecStart=startx /usr/bin/chromium-browser -- -nocursor -verbose 
+
+[Install]
+WantedBy=multi-user.target
