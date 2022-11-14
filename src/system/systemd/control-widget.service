@@ -4,7 +4,7 @@ Description=CNC Control Widget
 [Service]
 User=aokopal
 Restart=always
-ExecStart=startx /usr/bin/chromium-browser -- -nocursor -verbose 
+ExecStart=startx /usr/bin/chromium-browser --kiosk http://127.0.1.1:8000/widget/ -- -nocursor -verbose 
 
 [Install]
 WantedBy=multi-user.target
