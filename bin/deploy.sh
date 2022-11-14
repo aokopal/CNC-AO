@@ -37,6 +37,8 @@ fi
 
 echo "Deploying to: $DEST_HOST"
 
+cd ..
+
 scp dist/CNC-AO.tar.gz $DEST_HOST:/tmp
 ssh $DEST_HOST 'rm -rf ~/CNC-AO/* ; tar zxf /tmp/CNC-AO.tar.gz -C ~/ ; rm -f /tmp/CNC-AO.tar.gz'
 
