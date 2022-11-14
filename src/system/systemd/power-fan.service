@@ -1,0 +1,10 @@
+[Unit]
+Description=Power Management Board Fan service
+
+[Service]
+User=aokopal
+Restart=always
+ExecStart=/usr/bin/python3 /home/aokopal/CNC-AO/application/power-management/fan.py
+
+[Install]
+WantedBy=multi-user.target
